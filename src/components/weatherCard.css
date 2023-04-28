@@ -1,0 +1,113 @@
+
+
+#weather {
+    max-width: 500px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2% auto;
+    padding: 10px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+h1 {
+    text-align: center;
+    margin: 20px;
+    font-family: "Lato", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white; 
+  }
+  
+  p,
+  i {
+    margin: 5px;
+  }
+  
+  i {
+    font-size: 2.5rem;
+    color: white;
+  }
+  
+
+
+
+
+.weather-data {
+    display: flex;
+    justify-content: start;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 100%;
+  border: 5px solid rgb(217, 219, 219);
+  border: transparent;
+  box-shadow: rgba(1, 9, 10, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 20px;
+  background: rgba(255, 255, 255, 0.2); 
+
+ 
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 2px;
+}
+
+.weather-data p{
+    color: rgb(0, 0, 0);
+}
+.weather-data h2{
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+
+  .search{
+    width: 100%;
+  }
+
+  .cityName{
+    display: flex;
+  }
+
+  .img-temp{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .img-temp h1{
+    font-size: 3rem;
+  }
+
+  .cityName i{
+    position:relative;
+    animation:logo ease-in-out 3s infinite;
+}
+
+@keyframes logo
+{
+0%   { left:0px; top:0px;}
+50%  { left:3%; top:0px;}
+100% { left:0px; top:0px;}
+}
+ 
+.img-div{
+    position:relative;
+    animation:myfirst ease-in-out 5s infinite;
+}
+
+@keyframes myfirst
+{
+0%   { left:0px; top:0px;}
+50%  { left:10%; top:0px;}
+100% { left:0px; top:0px;}
+}
+
+.prop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.prop i{
+    font-size: 1rem;
+}

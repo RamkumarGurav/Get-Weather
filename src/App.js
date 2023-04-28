@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import WeatherCard from "./components/WeatherCard";
+import { useDispatch, useSelector } from "react-redux";
+import { recieveData } from "./store/weatherSlice";
+import Footer from "./components/Footer";
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+  const search = useSelector((state) => state.weather.search);
+  console.log(search);
+
+  useEffect(() => {
+    dispatch(recieveData(search))
+  }, [search,dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <WeatherCard />
+      <Footer/>
     </div>
   );
-}
+};
 
 export default App;
